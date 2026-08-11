@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "obsidian-skill-router"
+version = "0.2.0"
+description = "Local-first Obsidian vault generator for routing already-downloaded AI agent skills."
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.10"
+authors = [{ name = "xiademo" }]
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["obsidian", "agent-skills", "skill-routing", "local-first", "bm25"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["build==1.3.0", "twine==6.2.0"]
+
+[project.scripts]
+obsidian-skill-router = "obsidian_skill_router.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/xiademo/obsidian-skill-router"
+Documentation = "https://github.com/xiademo/obsidian-skill-router/tree/master/docs"
+Repository = "https://github.com/xiademo/obsidian-skill-router.git"
+Issues = "https://github.com/xiademo/obsidian-skill-router/issues"
+Changelog = "https://github.com/xiademo/obsidian-skill-router/blob/master/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+obsidian_skill_router = ["py.typed"]

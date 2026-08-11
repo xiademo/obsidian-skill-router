@@ -1,0 +1,13 @@
+{
+  "proposals": [
+    {
+      "skill": "Example Router",
+      "field": "aliases",
+      "value": ["routing-auditor"],
+      "source_hash": "replace-with-current-source-sha256",
+      "source_span": "SKILL.md:1-12",
+      "confidence": 0.9,
+      "status": "pending"
+    }
+  ]
+}

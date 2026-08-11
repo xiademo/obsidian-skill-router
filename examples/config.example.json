@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.2",
+  "skills_roots": ["C:/Users/you/.codex/skills"],
+  "vault": "C:/Users/you/Documents/SkillRouterVault",
+  "discovery": {
+    "max_depth": 6,
+    "legacy_readme_skills": false
+  },
+  "routing": {
+    "package_rules": {
+      "coding-workflow": ["repository", "code", "test", "build"],
+      "memory-knowledge": ["obsidian", "knowledge", "note"]
+    }
+  },
+  "graph": {
+    "max_workflow_next_per_source": 3
+  },
+  "policy": {
+    "risk_keywords": {
+      "high": ["delete", "publish", "payment", "send secret", "execute"]
+    }
+  }
+}

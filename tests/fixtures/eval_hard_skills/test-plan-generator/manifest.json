@@ -1,0 +1,10 @@
+{
+  "name": "test-plan-generator",
+  "description": "Generate a test plan from code review findings.",
+  "when_to_use": "Use after analyzing a code project.",
+  "input_types": ["findings", "repo"],
+  "output_types": ["plan", "tests"],
+  "aliases": ["测试计划", "生成测试", "test plan"],
+  "risk_level": "low",
+  "package": "coding-workflow"
+}

@@ -1,0 +1,214 @@
+[
+  {
+    "id": "cn_ambiguous_teacher_file_001",
+    "category": "ambiguous",
+    "user_task": "帮我整理这个文件，最后给我一个能发给老师的版本",
+    "expected_primary_package": "document-processing",
+    "expected_top2_packages": ["document-processing", "research-writing"],
+    "expected_related_packages": ["research-writing"],
+    "ambiguous": true,
+    "should_trigger": true,
+    "notes": "File cleanup plus teacher-ready deliverable should surface document and writing candidates."
+  },
+  {
+    "id": "cn_ambiguous_project_issue_001",
+    "category": "ambiguous",
+    "user_task": "帮我看看这个项目有没有问题",
+    "expected_primary_package": "coding-workflow",
+    "expected_top2_packages": ["coding-workflow", "safety-governance"],
+    "expected_related_packages": ["safety-governance"],
+    "ambiguous": true,
+    "should_trigger": true,
+    "notes": "Could mean code quality, project diagnosis, or risk review."
+  },
+  {
+    "id": "cn_ambiguous_material_report_001",
+    "category": "ambiguous",
+    "user_task": "这个材料能不能变成报告",
+    "expected_primary_package": "research-writing",
+    "expected_top2_packages": ["research-writing", "document-processing"],
+    "expected_related_packages": ["document-processing"],
+    "ambiguous": true,
+    "should_trigger": true,
+    "notes": "Material may need extraction first, then report writing."
+  },
+  {
+    "id": "cn_ambiguous_kb_001",
+    "category": "ambiguous",
+    "user_task": "我想把这些东西整理进知识库",
+    "expected_primary_package": "memory-knowledge",
+    "expected_top2_packages": ["memory-knowledge", "document-processing"],
+    "expected_related_packages": ["document-processing"],
+    "ambiguous": true,
+    "should_trigger": true,
+    "notes": "Knowledge-base organization should expose memory plus source processing."
+  },
+  {
+    "id": "cn_ambiguous_local_tools_001",
+    "category": "ambiguous",
+    "user_task": "帮我把本地工具管理一下",
+    "expected_primary_package": "automation-ops",
+    "expected_top2_packages": ["automation-ops", "memory-knowledge"],
+    "expected_related_packages": ["memory-knowledge"],
+    "ambiguous": true,
+    "should_trigger": true,
+    "notes": "Local tool management can mean indexing, organization, or automation operations."
+  },
+  {
+    "id": "cn_cross_resume_pdf_001",
+    "category": "cross_package",
+    "user_task": "根据 JD 修改简历，然后导出 PDF",
+    "expected_primary_package": "career-resume",
+    "expected_top2_packages": ["career-resume", "document-processing"],
+    "expected_related_packages": ["document-processing"],
+    "should_trigger": true,
+    "notes": "Resume edit should be primary with PDF export as related package."
+  },
+  {
+    "id": "cn_cross_research_word_001",
+    "category": "cross_package",
+    "user_task": "调研一个话题，写成报告，再生成 Word",
+    "expected_primary_package": "research-writing",
+    "expected_top2_packages": ["research-writing", "document-processing"],
+    "expected_related_packages": ["document-processing"],
+    "should_trigger": true,
+    "notes": "Research report should cross into document export."
+  },
+  {
+    "id": "cn_cross_pdf_obsidian_001",
+    "category": "cross_package",
+    "user_task": "把 PDF 资料整理成 Obsidian 笔记",
+    "expected_primary_package": "document-processing",
+    "expected_top2_packages": ["document-processing", "memory-knowledge"],
+    "expected_related_packages": ["memory-knowledge"],
+    "should_trigger": true,
+    "notes": "PDF extraction should feed Obsidian note capture."
+  },
+  {
+    "id": "cn_cross_skill_risk_archive_001",
+    "category": "cross_package",
+    "user_task": "检查一个 skill 是否有风险，并把它归档",
+    "expected_primary_package": "safety-governance",
+    "expected_top2_packages": ["safety-governance", "memory-knowledge"],
+    "expected_related_packages": ["memory-knowledge"],
+    "should_trigger": true,
+    "notes": "Risk review primary, archive as related knowledge-management step."
+  },
+  {
+    "id": "cn_cross_code_test_plan_001",
+    "category": "cross_package",
+    "user_task": "分析一个代码项目，然后生成测试计划",
+    "expected_primary_package": "coding-workflow",
+    "expected_top2_packages": ["coding-workflow", "automation-ops"],
+    "expected_related_packages": ["automation-ops"],
+    "should_trigger": true,
+    "notes": "Code analysis and generated test plan should stay coding-first while exposing automation as related."
+  },
+  {
+    "id": "cn_constraint_pdf_pages_001",
+    "category": "graph_constraint",
+    "user_task": "只提取 PDF 页码，不要转换成 Word",
+    "expected_primary_package": "document-processing",
+    "expected_top2_packages": ["document-processing"],
+    "forbid_graph_expansion": true,
+    "should_trigger": true,
+    "notes": "Only extract pages; report should show constraint detection."
+  },
+  {
+    "id": "cn_constraint_classify_skill_001",
+    "category": "graph_constraint",
+    "user_task": "只分类这个 skill，不要推荐后续 workflow",
+    "expected_primary_package": "safety-governance",
+    "expected_top2_packages": ["safety-governance"],
+    "forbid_graph_expansion": true,
+    "should_trigger": true,
+    "notes": "Classification only; no workflow expansion should be suggested."
+  },
+  {
+    "id": "cn_constraint_risk_only_001",
+    "category": "graph_constraint",
+    "user_task": "只检查风险，不要建议自动化操作",
+    "expected_primary_package": "safety-governance",
+    "expected_top2_packages": ["safety-governance"],
+    "forbid_graph_expansion": true,
+    "should_trigger": true,
+    "notes": "Risk only; automation package should be treated as constrained."
+  },
+  {
+    "id": "cn_constraint_skill_card_summary_001",
+    "category": "graph_constraint",
+    "user_task": "只总结这个 skill card，不需要工作流",
+    "expected_primary_package": "safety-governance",
+    "expected_top2_packages": ["safety-governance"],
+    "forbid_graph_expansion": true,
+    "should_trigger": true,
+    "notes": "Skill card summary should not expand into workflow recommendations."
+  },
+  {
+    "id": "cn_similar_pdf_ocr_001",
+    "category": "similar_confusion",
+    "user_task": "这个 PDF 不能复制文字，需要识别一下",
+    "expected_primary_package": "document-processing",
+    "expected_top2_packages": ["document-processing"],
+    "should_trigger": true,
+    "notes": "Scanned PDF should prefer OCR/extraction family, not Word export."
+  },
+  {
+    "id": "cn_similar_jd_analyze_001",
+    "category": "similar_confusion",
+    "user_task": "我有 JD，先帮我分析岗位要求",
+    "expected_primary_package": "career-resume",
+    "expected_top2_packages": ["career-resume"],
+    "should_trigger": true,
+    "notes": "JD analysis should stay in resume/career package."
+  },
+  {
+    "id": "cn_similar_resume_optimize_001",
+    "category": "similar_confusion",
+    "user_task": "我有简历，帮我针对 JD 改",
+    "expected_primary_package": "career-resume",
+    "expected_top2_packages": ["career-resume"],
+    "should_trigger": true,
+    "notes": "Resume optimization should beat generic document editing."
+  },
+  {
+    "id": "cn_similar_code_quality_001",
+    "category": "similar_confusion",
+    "user_task": "帮我检查代码质量，不是生成测试",
+    "expected_primary_package": "coding-workflow",
+    "expected_top2_packages": ["coding-workflow"],
+    "forbid_graph_expansion": true,
+    "should_trigger": true,
+    "notes": "Code quality review should not be treated as test generation."
+  },
+  {
+    "id": "cn_similar_test_generation_001",
+    "category": "similar_confusion",
+    "user_task": "帮我生成测试，不是做代码审查",
+    "expected_primary_package": "coding-workflow",
+    "expected_top2_packages": ["coding-workflow"],
+    "forbid_graph_expansion": true,
+    "should_trigger": true,
+    "notes": "Test generation should remain coding workflow but note the exclusion."
+  },
+  {
+    "id": "cn_mixed_obsidian_pdf_001",
+    "category": "cross_package",
+    "user_task": "Extract PDF 内容并整理到 Obsidian 笔记",
+    "expected_primary_package": "document-processing",
+    "expected_top2_packages": ["document-processing", "memory-knowledge"],
+    "expected_related_packages": ["memory-knowledge"],
+    "should_trigger": true,
+    "notes": "Mixed Chinese-English query should normalize both PDF and Obsidian."
+  },
+  {
+    "id": "cn_mixed_token_risk_001",
+    "category": "ambiguous",
+    "user_task": "帮我看一下这个 token 权限有没有风险",
+    "expected_primary_package": "safety-governance",
+    "expected_top2_packages": ["safety-governance"],
+    "ambiguous": true,
+    "should_trigger": true,
+    "notes": "Mixed token and permission language should be visibly routed to governance."
+  }
+]

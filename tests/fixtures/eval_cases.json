@@ -1,0 +1,32 @@
+[
+  {
+    "query": "review a repository diff and report risky code changes",
+    "expected_package": "coding-workflow",
+    "expected_skill": "Code Review"
+  },
+  {
+    "query": "extract text from a PDF into markdown",
+    "expected_package": "document-processing",
+    "expected_skill": "PDF Extract"
+  },
+  {
+    "query": "deploy a scheduled worker pipeline with operations monitoring",
+    "expected_package": "automation-ops",
+    "expected_skill": "Deploy Ops"
+  },
+  {
+    "query": "capture reusable Obsidian knowledge notes and update a vault index",
+    "expected_package": "memory-knowledge",
+    "expected_skill": "Knowledge Vault"
+  },
+  {
+    "query": "review credential handling and approval policy before a sensitive action",
+    "expected_package": "safety-governance",
+    "expected_skill": "Risk Governance"
+  },
+  {
+    "query": "choose tonight's dinner menu",
+    "expected_package": "",
+    "expected_skill": ""
+  }
+]

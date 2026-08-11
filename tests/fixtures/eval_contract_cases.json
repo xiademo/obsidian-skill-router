@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.2",
+  "cases": [
+    {
+      "id": "plan-report-001",
+      "intent_family": "research-report-plan",
+      "profile": "local",
+      "query": "Use Research then Report",
+      "expected_package": "research-writing",
+      "expected_skill": "Research",
+      "expected_decision": "skill_plan",
+      "expected_top3_contains": ["Research", "Report"],
+      "required_plan_skills": ["Research", "Report"],
+      "forbidden_skills": ["Delete Files"],
+      "required_order": [["Research", "Report"]],
+      "expected_review": false,
+      "should_trigger": true
+    },
+    {
+      "id": "plan-secret-002",
+      "intent_family": "secret-review-plan",
+      "profile": "security",
+      "query": "Use Secret Reader then Redactor",
+      "expected_package": "safety-governance",
+      "expected_skill": "Secret Reader",
+      "expected_decision": "review_required",
+      "risk_expectation": "high",
+      "required_plan_skills": ["Secret Reader", "Redactor"],
+      "forbidden_skills": ["Secret Sender"],
+      "required_order": [["Secret Reader", "Redactor"]],
+      "expected_review": true,
+      "should_trigger": true
+    },
+    {
+      "id": "clarify-review-003",
+      "intent_family": "ambiguous-review",
+      "query": "Review this material",
+      "expected_package": "research-writing",
+      "expected_decision": "clarify_required",
+      "ambiguous": true,
+      "should_trigger": true
+    },
+    {
+      "id": "unsupported-audio-004",
+      "intent_family": "unsupported-audio",
+      "query": "Transcribe this audio recording",
+      "expected_decision": "continue_without_skill",
+      "should_trigger": false
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "knowledge-extractor",
+  "description": "Extract reusable knowledge points from messy material.",
+  "when_to_use": "Use before writing knowledge-base notes.",
+  "input_types": ["markdown", "note"],
+  "output_types": ["note", "summary"],
+  "aliases": ["整理知识", "提取知识点", "knowledge extraction"],
+  "risk_level": "low",
+  "package": "memory-knowledge"
+}

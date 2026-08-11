@@ -1,0 +1,27 @@
+name: Feature request
+description: Propose an in-scope router improvement
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What routing or Registry problem should be solved?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: This proposal does not install, download, publish, or execute Skills.
+          required: true
+        - label: This proposal does not require a service, UI, vector database, or runtime LLM.
+          required: true

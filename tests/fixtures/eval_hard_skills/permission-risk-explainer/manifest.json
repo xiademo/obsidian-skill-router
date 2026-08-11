@@ -1,0 +1,8 @@
+{
+  "name": "permission-risk-explainer",
+  "description": "Explain permission and approval risk without executing actions.",
+  "when_to_use": "Use when a user needs a safety explanation.",
+  "input_types": ["policy", "task"],
+  "output_types": ["risk", "summary"],
+  "package": "safety-governance"
+}

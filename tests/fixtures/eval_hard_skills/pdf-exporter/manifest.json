@@ -1,0 +1,11 @@
+{
+  "name": "pdf-exporter",
+  "description": "Export polished documents to PDF.",
+  "when_to_use": "Use after writing when a PDF handoff is required.",
+  "input_types": ["doc", "resume"],
+  "output_types": ["pdf"],
+  "aliases": ["导出 PDF", "PDF export"],
+  "negative_triggers": ["不要转换成 PDF", "do not export PDF"],
+  "risk_level": "low",
+  "package": "document-processing"
+}

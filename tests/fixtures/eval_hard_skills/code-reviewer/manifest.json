@@ -1,0 +1,11 @@
+{
+  "name": "code-reviewer",
+  "description": "Review a code project for bugs, risks, and maintainability issues.",
+  "when_to_use": "Use when checking a repository or diff.",
+  "input_types": ["repo", "code", "diff"],
+  "output_types": ["findings", "report"],
+  "aliases": ["检查代码", "代码质量", "潜在 bug", "code review"],
+  "negative_triggers": ["not another code review"],
+  "risk_level": "low",
+  "package": "coding-workflow"
+}

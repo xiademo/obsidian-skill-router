@@ -1,0 +1,8 @@
+{
+  "name": "api-network-tool",
+  "description": "Call external network APIs and return a report.",
+  "when_to_use": "Use when an external API request is required.",
+  "input_types": ["api", "url"],
+  "output_types": ["report"],
+  "package": "automation-ops"
+}

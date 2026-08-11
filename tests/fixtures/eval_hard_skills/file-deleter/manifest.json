@@ -1,0 +1,10 @@
+{
+  "name": "file-deleter",
+  "description": "Delete local files from a workspace.",
+  "when_to_use": "Use only when deletion is explicitly approved.",
+  "input_types": ["file", "path"],
+  "output_types": ["report"],
+  "actions": ["delete files"],
+  "risk_level": "high",
+  "package": "automation-ops"
+}

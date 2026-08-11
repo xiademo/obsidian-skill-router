@@ -1,0 +1,8 @@
+{
+  "name": "file-reader",
+  "description": "Read local files for inspection.",
+  "when_to_use": "Use for read-only file inspection.",
+  "input_types": ["file", "path"],
+  "output_types": ["summary"],
+  "package": "document-processing"
+}

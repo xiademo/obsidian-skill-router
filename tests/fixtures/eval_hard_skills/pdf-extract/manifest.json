@@ -1,0 +1,10 @@
+{
+  "name": "pdf-extract",
+  "description": "Extract text and selected pages from searchable PDF files.",
+  "when_to_use": "Use when the PDF already has selectable text.",
+  "input_types": ["pdf"],
+  "output_types": ["markdown", "text"],
+  "aliases": ["提取 PDF 文字", "PDF 资料", "可复制文字", "PDF text extraction"],
+  "risk_level": "low",
+  "package": "document-processing"
+}

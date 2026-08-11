@@ -1,0 +1,10 @@
+{
+  "name": "obsidian-note-writer",
+  "description": "Write organized Obsidian notes from source material.",
+  "when_to_use": "Use when material should become durable knowledge notes.",
+  "input_types": ["markdown", "note", "pdf"],
+  "output_types": ["note", "vault"],
+  "aliases": ["Obsidian 笔记", "写入知识库", "knowledge notes"],
+  "risk_level": "medium",
+  "package": "memory-knowledge"
+}

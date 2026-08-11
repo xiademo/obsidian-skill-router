@@ -1,0 +1,66 @@
+{
+  "schema_version": "0.2",
+  "cases": [
+    {
+      "id": "multi-resume-pdf-001",
+      "intent_family": "resume-pdf-plan",
+      "query": "Use resume-optimizer then use pdf-exporter",
+      "expected_package": "career-resume",
+      "expected_skill": "resume-optimizer",
+      "expected_decision": "skill_plan",
+      "expected_top3_contains": ["resume-optimizer", "pdf-exporter"],
+      "required_plan_skills": ["resume-optimizer", "pdf-exporter"],
+      "forbidden_skills": ["file-deleter"],
+      "required_order": [["resume-optimizer", "pdf-exporter"]],
+      "expected_review": false,
+      "should_trigger": true,
+      "importance": 2
+    },
+    {
+      "id": "multi-review-tests-002",
+      "intent_family": "code-review-test-plan",
+      "query": "Use code-reviewer then use test-plan-generator",
+      "expected_package": "coding-workflow",
+      "expected_skill": "code-reviewer",
+      "expected_decision": "skill_plan",
+      "expected_top3_contains": ["code-reviewer", "test-plan-generator"],
+      "required_plan_skills": ["code-reviewer", "test-plan-generator"],
+      "forbidden_skills": ["shell-executor"],
+      "required_order": [["code-reviewer", "test-plan-generator"]],
+      "expected_review": false,
+      "should_trigger": true,
+      "importance": 2
+    },
+    {
+      "id": "multi-risk-review-003",
+      "intent_family": "high-risk-plan",
+      "query": "Use shell-executor then use sensitive-file-checker",
+      "expected_package": "automation-ops",
+      "expected_skill": "shell-executor",
+      "expected_decision": "review_required",
+      "expected_top3_contains": ["shell-executor", "sensitive-file-checker"],
+      "required_plan_skills": ["shell-executor", "sensitive-file-checker"],
+      "forbidden_skills": ["secret-access-tool"],
+      "required_order": [["shell-executor", "sensitive-file-checker"]],
+      "expected_review": true,
+      "risk_expectation": "high",
+      "should_trigger": true,
+      "importance": 3
+    },
+    {
+      "id": "multi-jd-notes-004",
+      "intent_family": "jd-knowledge-plan",
+      "query": "Use jd-analyzer then use obsidian-note-writer",
+      "expected_package": "career-resume",
+      "expected_skill": "jd-analyzer",
+      "expected_decision": "skill_plan",
+      "expected_top3_contains": ["jd-analyzer", "obsidian-note-writer"],
+      "required_plan_skills": ["jd-analyzer", "obsidian-note-writer"],
+      "forbidden_skills": ["file-deleter"],
+      "required_order": [["jd-analyzer", "obsidian-note-writer"]],
+      "expected_review": false,
+      "should_trigger": true,
+      "importance": 2
+    }
+  ]
+}

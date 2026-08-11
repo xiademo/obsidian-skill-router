@@ -1,0 +1,11 @@
+{
+  "name": "word-exporter",
+  "description": "Convert markdown or reports into Word documents.",
+  "when_to_use": "Use after research writing when a Word document is required.",
+  "input_types": ["markdown", "report"],
+  "output_types": ["docx"],
+  "aliases": ["生成 Word", "Word export"],
+  "negative_triggers": ["不要转换成 Word", "do not export Word"],
+  "risk_level": "low",
+  "package": "document-processing"
+}

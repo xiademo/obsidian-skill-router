@@ -1,0 +1,11 @@
+{
+  "name": "local-tool-indexer",
+  "description": "Organize local tool metadata into a searchable index.",
+  "when_to_use": "Use when managing local tool inventory without executing tools.",
+  "input_types": ["tool", "markdown"],
+  "output_types": ["index", "report"],
+  "aliases": ["本地工具索引", "本地工具建索引", "local tool index"],
+  "positive_triggers": ["工具管理"],
+  "risk_level": "medium",
+  "package": "automation-ops"
+}

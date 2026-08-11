@@ -1,0 +1,10 @@
+{
+  "name": "secret-access-tool",
+  "description": "Access tokens and secrets from environment variables.",
+  "when_to_use": "Use only when secret access is explicitly authorized.",
+  "input_types": ["secret", "token"],
+  "output_types": ["report"],
+  "actions": ["read credential", "send secret"],
+  "risk_level": "high",
+  "package": "automation-ops"
+}

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Obsidian Skill Router"
+  short_description: "Build and validate local Obsidian routing vaults for Codex skills."
+  default_prompt: "Use $obsidian-skill-router to scan local Codex skills into an Obsidian routing vault and validate the result."
+
+policy:
+  allow_implicit_invocation: true

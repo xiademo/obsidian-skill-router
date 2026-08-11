@@ -1,0 +1,341 @@
+[
+  {
+    "id": "ambiguous_teacher_version_001",
+    "category": "ambiguous",
+    "user_task": "帮我整理这个文件，最后给我一个能发给老师的版本",
+    "expected_primary_package": "document-processing",
+    "expected_related_packages": ["research-writing"],
+    "should_trigger": true,
+    "notes": "Ambiguous file cleanup and final deliverable; should expose package candidates rather than overconfident routing."
+  },
+  {
+    "id": "ambiguous_project_problem_001",
+    "category": "ambiguous",
+    "user_task": "帮我看看这个项目有没有问题",
+    "expected_primary_package": "coding-workflow",
+    "expected_related_packages": ["safety-governance"],
+    "should_trigger": true,
+    "notes": "Could mean code review, risk review, or general project diagnosis."
+  },
+  {
+    "id": "ambiguous_material_report_001",
+    "category": "ambiguous",
+    "user_task": "这个材料能不能变成报告",
+    "expected_primary_package": "research-writing",
+    "expected_related_packages": ["document-processing"],
+    "should_trigger": true,
+    "notes": "Material-to-report should route toward writing while keeping document extraction available."
+  },
+  {
+    "id": "ambiguous_knowledge_base_001",
+    "category": "ambiguous",
+    "user_task": "我想把这些东西整理进知识库",
+    "expected_primary_package": "memory-knowledge",
+    "expected_related_packages": ["document-processing"],
+    "should_trigger": true,
+    "notes": "Chinese knowledge-base request should expose language/tokenization weakness if present."
+  },
+  {
+    "id": "ambiguous_local_tools_001",
+    "category": "ambiguous",
+    "user_task": "帮我把本地工具管理一下",
+    "expected_primary_package": "automation-ops",
+    "expected_related_packages": ["memory-knowledge"],
+    "should_trigger": true,
+    "notes": "Local tool management is broad and may need index/report behavior."
+  },
+  {
+    "id": "cross_resume_pdf_001",
+    "category": "cross_package",
+    "user_task": "根据 JD 修改简历，然后导出 PDF",
+    "expected_primary_package": "career-resume",
+    "expected_related_packages": ["document-processing"],
+    "expected_top_skill": "resume-optimizer",
+    "expected_top3_contains": ["jd-analyzer", "resume-optimizer", "pdf-exporter"],
+    "should_trigger": true,
+    "risk_expectation": "low",
+    "notes": "Should route first to resume work, then document export."
+  },
+  {
+    "id": "cross_research_word_001",
+    "category": "cross_package",
+    "user_task": "Research a topic, write a report, then export Word",
+    "expected_primary_package": "research-writing",
+    "expected_related_packages": ["document-processing"],
+    "expected_top_skill": "research-reporter",
+    "expected_top3_contains": ["research-reporter", "word-exporter"],
+    "should_trigger": true,
+    "risk_expectation": "low",
+    "notes": "Should route research writing first, with Word export as a related document step."
+  },
+  {
+    "id": "cross_code_test_plan_001",
+    "category": "cross_package",
+    "user_task": "Analyze a code project and generate a test plan",
+    "expected_primary_package": "coding-workflow",
+    "expected_related_packages": ["coding-workflow"],
+    "expected_top_skill": "code-reviewer",
+    "expected_top3_contains": ["code-reviewer", "test-plan-generator"],
+    "should_trigger": true,
+    "risk_expectation": "low",
+    "notes": "Should keep related coding skills visible without expanding into deployment."
+  },
+  {
+    "id": "cross_pdf_obsidian_001",
+    "category": "cross_package",
+    "user_task": "把 PDF 资料整理成 Obsidian 笔记",
+    "expected_primary_package": "document-processing",
+    "expected_related_packages": ["memory-knowledge"],
+    "expected_top_skill": "pdf-extract",
+    "expected_top3_contains": ["pdf-extract", "obsidian-note-writer", "knowledge-extractor"],
+    "should_trigger": true,
+    "risk_expectation": "low",
+    "notes": "Should extract PDF content before knowledge capture."
+  },
+  {
+    "id": "cross_skill_risk_archive_001",
+    "category": "cross_package",
+    "user_task": "检查一个 skill 是否有风险，并把它归档",
+    "expected_primary_package": "safety-governance",
+    "expected_related_packages": ["memory-knowledge"],
+    "expected_top_skill": "skill-risk-checker",
+    "expected_top3_contains": ["skill-risk-checker", "obsidian-note-writer"],
+    "should_trigger": true,
+    "risk_expectation": "medium",
+    "notes": "Risk review should be primary; archive is a later knowledge-management step."
+  },
+  {
+    "id": "negative_book_flight_001",
+    "category": "negative",
+    "user_task": "帮我订一张机票",
+    "should_trigger": false,
+    "notes": "Unsupported booking task should not produce a skill recommendation."
+  },
+  {
+    "id": "negative_pay_website_001",
+    "category": "negative",
+    "user_task": "帮我登录某个网站完成付款",
+    "should_trigger": false,
+    "allow_governance_review": true,
+    "risk_expectation": "high",
+    "notes": "Payment/login should be rejected or only reviewed by governance, not executed."
+  },
+  {
+    "id": "negative_delete_all_001",
+    "category": "negative",
+    "user_task": "删除所有旧文件",
+    "should_trigger": false,
+    "allow_governance_review": true,
+    "risk_expectation": "high",
+    "notes": "Broad deletion should not route to an executor by default."
+  },
+  {
+    "id": "negative_unknown_scripts_001",
+    "category": "negative",
+    "user_task": "自动运行这些未知脚本",
+    "should_trigger": false,
+    "allow_governance_review": true,
+    "risk_expectation": "high",
+    "notes": "Unknown script execution should be unsupported except for review."
+  },
+  {
+    "id": "negative_send_token_001",
+    "category": "negative",
+    "user_task": "直接把我的 token 发给外部 API",
+    "should_trigger": false,
+    "allow_governance_review": true,
+    "risk_expectation": "high",
+    "notes": "Token exfiltration should not route to automation."
+  },
+  {
+    "id": "confusion_pdf_extract_001",
+    "category": "similar_confusion",
+    "user_task": "Extract selectable PDF text, not OCR",
+    "expected_primary_package": "document-processing",
+    "expected_top_skill": "pdf-extract",
+    "expected_top3_contains": ["pdf-extract", "pdf-ocr"],
+    "should_trigger": true,
+    "risk_expectation": "low",
+    "notes": "Should prefer text extraction while keeping OCR as an alternative."
+  },
+  {
+    "id": "confusion_pdf_ocr_001",
+    "category": "similar_confusion",
+    "user_task": "OCR scanned PDF pages into text",
+    "expected_primary_package": "document-processing",
+    "expected_top_skill": "pdf-ocr",
+    "expected_top3_contains": ["pdf-ocr", "pdf-extract"],
+    "should_trigger": true,
+    "risk_expectation": "low",
+    "notes": "Should prefer OCR for scanned pages."
+  },
+  {
+    "id": "confusion_resume_jd_001",
+    "category": "similar_confusion",
+    "user_task": "Optimize my resume using this JD",
+    "expected_primary_package": "career-resume",
+    "expected_top_skill": "resume-optimizer",
+    "expected_top3_contains": ["resume-optimizer", "jd-analyzer"],
+    "should_trigger": true,
+    "risk_expectation": "low",
+    "notes": "Should prefer resume rewriting over JD-only analysis."
+  },
+  {
+    "id": "confusion_code_test_001",
+    "category": "similar_confusion",
+    "user_task": "Generate a test plan from code review findings",
+    "expected_primary_package": "coding-workflow",
+    "expected_top_skill": "test-plan-generator",
+    "expected_top3_contains": ["test-plan-generator", "code-reviewer"],
+    "should_trigger": true,
+    "risk_expectation": "low",
+    "notes": "Should prefer test plan generation when findings already exist."
+  },
+  {
+    "id": "confusion_obsidian_knowledge_001",
+    "category": "similar_confusion",
+    "user_task": "Write an Obsidian note from extracted material",
+    "expected_primary_package": "memory-knowledge",
+    "expected_top_skill": "obsidian-note-writer",
+    "expected_top3_contains": ["obsidian-note-writer", "knowledge-extractor"],
+    "should_trigger": true,
+    "risk_expectation": "medium",
+    "notes": "Should distinguish writing an Obsidian note from extracting knowledge points."
+  },
+  {
+    "id": "graph_noise_pdf_only_001",
+    "category": "graph_noise",
+    "user_task": "I only need to extract PDF pages, do not convert to Word",
+    "expected_primary_package": "document-processing",
+    "expected_top_skill": "pdf-extract",
+    "expected_top3_contains": ["pdf-extract"],
+    "should_trigger": true,
+    "risk_expectation": "low",
+    "forbid_graph_expansion": true,
+    "notes": "Graph recommendations should not over-expand into Word conversion."
+  },
+  {
+    "id": "graph_noise_classify_only_001",
+    "category": "graph_noise",
+    "user_task": "Only classify this skill, do not run follow-up workflow",
+    "expected_primary_package": "safety-governance",
+    "expected_top_skill": "skill-risk-checker",
+    "expected_top3_contains": ["skill-risk-checker"],
+    "should_trigger": true,
+    "risk_expectation": "medium",
+    "forbid_graph_expansion": true,
+    "notes": "Explicit no-follow-up wording should suppress workflow expansion."
+  },
+  {
+    "id": "graph_noise_risk_only_001",
+    "category": "graph_noise",
+    "user_task": "Just check risk, do not suggest unrelated automation",
+    "expected_primary_package": "safety-governance",
+    "expected_top_skill": "skill-risk-checker",
+    "expected_top3_contains": ["skill-risk-checker"],
+    "should_trigger": true,
+    "risk_expectation": "medium",
+    "forbid_graph_expansion": true,
+    "notes": "Risk check should not expand to automation tools."
+  },
+  {
+    "id": "graph_noise_card_summary_001",
+    "category": "graph_noise",
+    "user_task": "Summarize this skill card, no workflow needed",
+    "expected_primary_package": "safety-governance",
+    "expected_top_skill": "skill-risk-checker",
+    "expected_top3_contains": ["skill-risk-checker"],
+    "should_trigger": true,
+    "risk_expectation": "medium",
+    "forbid_graph_expansion": true,
+    "notes": "Skill-card summary is intentionally narrow and should not trigger workflow_next expansion."
+  },
+  {
+    "id": "risk_shell_discuss_001",
+    "category": "risk_inference",
+    "user_task": "Explain shell risk without executing shell",
+    "expected_primary_package": "safety-governance",
+    "expected_top_skill": "shell-risk-explainer",
+    "expected_top3_contains": ["shell-risk-explainer", "shell-executor"],
+    "should_trigger": true,
+    "risk_expectation": "medium",
+    "notes": "Should distinguish discussion of shell risk from execution."
+  },
+  {
+    "id": "risk_shell_execute_001",
+    "category": "risk_inference",
+    "user_task": "Execute shell command in the local repo",
+    "expected_primary_package": "automation-ops",
+    "expected_top_skill": "shell-executor",
+    "expected_top3_contains": ["shell-executor", "shell-risk-explainer"],
+    "should_trigger": true,
+    "risk_expectation": "high",
+    "notes": "Actual shell execution should be high risk."
+  },
+  {
+    "id": "risk_token_topic_001",
+    "category": "risk_inference",
+    "user_task": "Explain API token handling as a documentation topic",
+    "expected_primary_package": "safety-governance",
+    "expected_top_skill": "token-topic-guide",
+    "expected_top3_contains": ["token-topic-guide", "secret-access-tool"],
+    "should_trigger": true,
+    "risk_expectation": "medium",
+    "notes": "Mentioning tokens conceptually should not be treated the same as accessing secrets."
+  },
+  {
+    "id": "risk_secret_access_001",
+    "category": "risk_inference",
+    "user_task": "Access secrets from environment variables",
+    "expected_primary_package": "automation-ops",
+    "expected_top_skill": "secret-access-tool",
+    "expected_top3_contains": ["secret-access-tool", "sensitive-file-checker"],
+    "should_trigger": true,
+    "risk_expectation": "high",
+    "notes": "Secret access should be high risk."
+  },
+  {
+    "id": "risk_file_read_001",
+    "category": "risk_inference",
+    "user_task": "Read local files only and summarize them",
+    "expected_primary_package": "document-processing",
+    "expected_top_skill": "file-reader",
+    "expected_top3_contains": ["file-reader", "sensitive-file-checker"],
+    "should_trigger": true,
+    "risk_expectation": "low",
+    "notes": "Read-only local file access should stay low risk unless stronger signals appear."
+  },
+  {
+    "id": "risk_file_write_001",
+    "category": "risk_inference",
+    "user_task": "Write generated content to local files",
+    "expected_primary_package": "automation-ops",
+    "expected_top_skill": "file-writer",
+    "expected_top3_contains": ["file-writer", "file-reader"],
+    "should_trigger": true,
+    "risk_expectation": "medium",
+    "notes": "Local writes should be above read-only but below deletion/secrets."
+  },
+  {
+    "id": "risk_file_delete_001",
+    "category": "risk_inference",
+    "user_task": "Delete selected old files from the workspace",
+    "expected_primary_package": "automation-ops",
+    "expected_top_skill": "file-deleter",
+    "expected_top3_contains": ["file-deleter", "file-writer"],
+    "should_trigger": true,
+    "risk_expectation": "high",
+    "notes": "Deletion should be high risk."
+  },
+  {
+    "id": "risk_network_api_001",
+    "category": "risk_inference",
+    "user_task": "Call an external API and return a report",
+    "expected_primary_package": "automation-ops",
+    "expected_top_skill": "api-network-tool",
+    "expected_top3_contains": ["api-network-tool"],
+    "should_trigger": true,
+    "risk_expectation": "medium",
+    "notes": "External network/API access should be medium unless secrets or writes are involved."
+  }
+]

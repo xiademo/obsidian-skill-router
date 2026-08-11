@@ -1,0 +1,10 @@
+{
+  "name": "sensitive-file-checker",
+  "description": "Inspect file paths for sensitive data exposure risk.",
+  "when_to_use": "Use when checking whether files contain secrets or credentials.",
+  "input_types": ["file", "path"],
+  "output_types": ["risk", "report"],
+  "aliases": ["敏感路径", "暴露凭证", "credential exposure"],
+  "risk_level": "medium",
+  "package": "safety-governance"
+}

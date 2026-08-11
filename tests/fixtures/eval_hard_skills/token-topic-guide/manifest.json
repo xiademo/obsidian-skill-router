@@ -1,0 +1,8 @@
+{
+  "name": "token-topic-guide",
+  "description": "Explain token handling as a documentation topic.",
+  "when_to_use": "Use for conceptual documentation about API tokens.",
+  "input_types": ["prompt", "policy"],
+  "output_types": ["summary"],
+  "package": "safety-governance"
+}

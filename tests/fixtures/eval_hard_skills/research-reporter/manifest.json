@@ -1,0 +1,10 @@
+{
+  "name": "research-reporter",
+  "description": "Research a topic and write a structured report.",
+  "when_to_use": "Use for research writing from notes or source material.",
+  "input_types": ["note", "markdown"],
+  "output_types": ["report"],
+  "aliases": ["调研报告", "写报告", "research report"],
+  "risk_level": "low",
+  "package": "research-writing"
+}

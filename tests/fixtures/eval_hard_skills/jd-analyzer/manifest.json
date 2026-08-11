@@ -1,0 +1,10 @@
+{
+  "name": "jd-analyzer",
+  "description": "Analyze job descriptions and extract candidate requirements.",
+  "when_to_use": "Use before resume optimization to understand job requirements.",
+  "input_types": ["job"],
+  "output_types": ["report"],
+  "aliases": ["分析 JD", "岗位要求", "job requirements"],
+  "risk_level": "low",
+  "package": "career-resume"
+}

@@ -1,0 +1,18 @@
+{
+  "cases": [
+    {
+      "id": "routing-audit-001",
+      "intent_family": "routing-audit",
+      "query": "audit local Skill routing rules",
+      "expected_package": "safety-governance",
+      "expected_skill": "Example Router",
+      "should_trigger": true
+    },
+    {
+      "id": "unsupported-001",
+      "intent_family": "unsupported-media",
+      "query": "transcribe this audio recording",
+      "should_trigger": false
+    }
+  ]
+}

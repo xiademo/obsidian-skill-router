@@ -1,0 +1,10 @@
+{
+  "name": "skill-risk-checker",
+  "description": "Check a local skill for permission, credential, and execution risk.",
+  "when_to_use": "Use before archiving or enabling a skill.",
+  "input_types": ["skill", "policy"],
+  "output_types": ["risk", "report"],
+  "aliases": ["skill 风险", "权限风险", "总结 skill card"],
+  "risk_level": "medium",
+  "package": "safety-governance"
+}

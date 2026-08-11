@@ -1,0 +1,11 @@
+{
+  "name": "pdf-ocr",
+  "description": "Run OCR on scanned PDF images.",
+  "when_to_use": "Use when a PDF page is an image scan and needs OCR.",
+  "input_types": ["pdf", "image"],
+  "output_types": ["text"],
+  "aliases": ["OCR 识别", "扫描 PDF", "scanned PDF OCR"],
+  "negative_triggers": ["not a scanned document"],
+  "risk_level": "low",
+  "package": "document-processing"
+}

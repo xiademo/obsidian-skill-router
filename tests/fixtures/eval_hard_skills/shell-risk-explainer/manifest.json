@@ -1,0 +1,10 @@
+{
+  "name": "shell-risk-explainer",
+  "description": "Explain shell command risk without executing shell commands.",
+  "when_to_use": "Use when discussing shell safety conceptually.",
+  "input_types": ["command", "policy"],
+  "output_types": ["risk", "summary"],
+  "aliases": ["解释 shell 风险", "shell safety"],
+  "risk_level": "medium",
+  "package": "safety-governance"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "file-writer",
+  "description": "Write generated content to local files.",
+  "when_to_use": "Use when file output is required.",
+  "input_types": ["markdown"],
+  "output_types": ["file"],
+  "package": "automation-ops"
+}

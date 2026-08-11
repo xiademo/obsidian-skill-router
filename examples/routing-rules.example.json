@@ -1,0 +1,18 @@
+{
+  "skills": [
+    {
+      "name": "Example Router",
+      "package": "safety-governance",
+      "alternate_packages": ["coding-workflow"],
+      "aliases": ["example-router"],
+      "positive_triggers": ["audit local routing rules"],
+      "negative_triggers": ["execute the selected Skill"],
+      "route_mode": "default",
+      "risk_level": "low",
+      "permissions": [],
+      "permissions_known": true,
+      "network_access": false,
+      "writes_files": false
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "shell-executor",
+  "description": "Execute shell commands against a local workspace.",
+  "when_to_use": "Use when command execution is explicitly requested.",
+  "input_types": ["command", "repo"],
+  "output_types": ["logs", "report"],
+  "actions": ["execute shell command"],
+  "negative_triggers": ["do not execute", "不要执行"],
+  "risk_level": "high",
+  "package": "automation-ops"
+}

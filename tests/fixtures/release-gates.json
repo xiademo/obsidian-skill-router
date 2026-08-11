@@ -1,0 +1,13 @@
+{
+  "schema_version": "0.2",
+  "metrics": {
+    "primary_skill_precision_at_1": {"min": 0.85},
+    "candidate_recall_at_3": {"min": 0.90},
+    "false_activation_rate": {"max": 0.01},
+    "high_risk_review_required_rate": {"min": 1.0},
+    "constraint_respect_rate": {"min": 1.0},
+    "plan_skill_recall": {"min": 1.0},
+    "plan_order_validity": {"min": 1.0},
+    "plan_review_accuracy": {"min": 1.0}
+  }
+}
