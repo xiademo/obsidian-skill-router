@@ -242,18 +242,38 @@ CI tests Python 3.10–3.13 on Ubuntu and the supported endpoint versions on
 Windows. See the [test and release plan](docs/TEST_PLAN.md) for fixtures,
 metrics, graph ablation, and release gates.
 
-## Development and governance
+## Development
 
 ```powershell
 $env:PYTHONPATH = "src"
 python -m unittest discover -s tests
 ```
 
-- [Architecture](docs/ARCHITECTURE.md)
-- [Installation](docs/INSTALLATION.md)
-- [Contributing](CONTRIBUTING.md)
-- [Security policy](SECURITY.md)
-- [Changelog](CHANGELOG.md)
-- [Release procedure](docs/RELEASING.md)
+## Documentation
+
+| Need | Start here |
+| --- | --- |
+| Install, upgrade, or uninstall | [Installation](docs/INSTALLATION.md) |
+| Find a command or option | [CLI reference](docs/CLI.md) |
+| Configure discovery, overlays, or enrichment | [Configuration](docs/CONFIGURATION.md) |
+| Understand routing and planning | [Architecture](docs/ARCHITECTURE.md) |
+| Reproduce quality gates | [Test plan](docs/TEST_PLAN.md) |
+| Use the committed JSON contracts | [Examples](examples/README.md) |
+| Contribute or release | [Contributing](CONTRIBUTING.md) · [Release procedure](docs/RELEASING.md) |
+| Report a vulnerability | [Security policy](SECURITY.md) |
+
+Full index: [Documentation home](docs/README.md). Version history:
+[Changelog](CHANGELOG.md).
+
+## Repository map
+
+| Path | Role |
+| --- | --- |
+| `src/obsidian_skill_router/` | Python product and library |
+| `docs/` | User, architecture, evaluation, and release documentation |
+| `examples/` | Synthetic JSON input contracts |
+| `tests/` | Unit, policy, security, planning, and evaluation regression tests |
+| `SKILL.md`, `agents/`, `references/` | Companion repository Skill and agent integration, not the entity Skill corpus indexed for product tests |
+| `test_artifacts/` | Ignored local scans, builds, and redacted workload evidence |
 
 Released under the [MIT License](LICENSE).

@@ -230,18 +230,37 @@ Get-Content .\hook-event.json | obsidian-skill-router --json hook --vault C:\pat
 CI 在 Ubuntu 上覆盖 Python 3.10–3.13，并在 Windows 上覆盖受支持端点版本。
 fixture、指标、图消融与发布门禁见[测试与发布计划](docs/TEST_PLAN.md)。
 
-## 开发与治理
+## 开发
 
 ```powershell
 $env:PYTHONPATH = "src"
 python -m unittest discover -s tests
 ```
 
-- [架构](docs/ARCHITECTURE.md)
-- [安装](docs/INSTALLATION.md)
-- [贡献指南](CONTRIBUTING.md)
-- [安全策略](SECURITY.md)
-- [版本记录](CHANGELOG.md)
-- [发布流程](docs/RELEASING.md)
+## 文档导航
+
+| 需求 | 从这里开始 |
+| --- | --- |
+| 安装、升级或卸载 | [安装](docs/INSTALLATION.md) |
+| 查找命令或参数 | [CLI 参考](docs/CLI.md) |
+| 配置发现、overlay 或 enrichment | [配置与治理](docs/CONFIGURATION.md) |
+| 理解路由与编排 | [架构](docs/ARCHITECTURE.md) |
+| 复现质量门禁 | [测试计划](docs/TEST_PLAN.md) |
+| 使用提交的 JSON 契约 | [示例](examples/README.md) |
+| 贡献或发布 | [贡献指南](CONTRIBUTING.md) · [发布流程](docs/RELEASING.md) |
+| 报告安全问题 | [安全策略](SECURITY.md) |
+
+完整入口：[文档主页](docs/README.md)。版本历史：[CHANGELOG](CHANGELOG.md)。
+
+## 仓库结构
+
+| 路径 | 职责 |
+| --- | --- |
+| `src/obsidian_skill_router/` | Python 产品本体与库 |
+| `docs/` | 用户、架构、评测与发布文档 |
+| `examples/` | 纯合成 JSON 输入契约 |
+| `tests/` | 单测、策略、安全、编排与评测回归 |
+| `SKILL.md`、`agents/`、`references/` | 本仓库的 companion Skill 与 agent integration，不是产品测试所索引的实体 Skill 集合 |
+| `test_artifacts/` | Git 忽略的本地扫描、构建与脱敏 workload 证据 |
 
 项目使用 [MIT License](LICENSE)。

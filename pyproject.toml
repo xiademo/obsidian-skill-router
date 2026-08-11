@@ -35,7 +35,7 @@ obsidian-skill-router = "obsidian_skill_router.cli:main"
 
 [project.urls]
 Homepage = "https://github.com/xiademo/obsidian-skill-router"
-Documentation = "https://github.com/xiademo/obsidian-skill-router/tree/master/docs"
+Documentation = "https://github.com/xiademo/obsidian-skill-router/blob/master/docs/README.md"
 Repository = "https://github.com/xiademo/obsidian-skill-router.git"
 Issues = "https://github.com/xiademo/obsidian-skill-router/issues"
 Changelog = "https://github.com/xiademo/obsidian-skill-router/blob/master/CHANGELOG.md"

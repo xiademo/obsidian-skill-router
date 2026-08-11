@@ -6,6 +6,13 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+### Changed
+
+- Rebuilt the English and Simplified Chinese README around routing pain,
+  decision outcomes, and a reproducible first route.
+- Added a task-oriented documentation hub, complete CLI and configuration
+  references, an examples index, and executable documentation contracts.
+
 ## [0.2.0] - 2026-08-11
 
 ### Added

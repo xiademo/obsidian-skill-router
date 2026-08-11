@@ -101,3 +101,6 @@ Virtual-environment installations can be removed with:
 ```bash
 python -m pip uninstall obsidian-skill-router
 ```
+
+Next: [CLI reference](CLI.md) · [Configuration](CONFIGURATION.md) ·
+[Documentation home](README.md)
